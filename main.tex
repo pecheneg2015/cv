@@ -1,0 +1,260 @@
+\PassOptionsToPackage{dvipsnames}{xcolor}
+
+\documentclass[10pt,a4paper,ragged2e,withhyper]{altacv}
+
+\geometry{left=1.2cm,right=1.2cm,top=1cm,bottom=1cm,columnsep=0.75cm}
+
+\usepackage{paracol}
+\usepackage[T2A]{fontenc}     % внутренняя T2A кодировка TeX
+\usepackage[koi8-r]{inputenc} % кодировка - можно использовать [cp866] [cp1251]
+\usepackage[russian]{babel}   % включение переносов
+
+\ifxetexorluatex
+  \setmainfont{Roboto Slab}
+  \setsansfont{Lato}
+  \renewcommand{\familydefault}{\sfdefault}
+\else
+  \usepackage[rm]{roboto}
+  \usepackage[defaultsans]{lato}
+  \renewcommand{\familydefault}{\sfdefault}
+\fi
+
+\ifdarkmode%
+  \definecolor{PrimaryColor}{HTML}{C69749}
+  \definecolor{SecondaryColor}{HTML}{D49B54}
+  \definecolor{ThirdColor}{HTML}{1877E8}
+  \definecolor{BodyColor}{HTML}{ABABAB}
+  \definecolor{EmphasisColor}{HTML}{ABABAB}
+  \definecolor{BackgroundColor}{HTML}{191919}
+\else%
+  \definecolor{PrimaryColor}{HTML}{001F5A}
+  \definecolor{SecondaryColor}{HTML}{0039AC}
+  \definecolor{ThirdColor}{HTML}{F3890B}
+  \definecolor{BodyColor}{HTML}{666666}
+  \definecolor{EmphasisColor}{HTML}{2E2E2E}
+  \definecolor{BackgroundColor}{HTML}{E2E2E2}
+\fi%
+
+\colorlet{name}{PrimaryColor}
+\colorlet{tagline}{SecondaryColor}
+\colorlet{heading}{PrimaryColor}
+\colorlet{headingrule}{ThirdColor}
+\colorlet{subheading}{SecondaryColor}
+\colorlet{accent}{SecondaryColor}
+\colorlet{emphasis}{EmphasisColor}
+\colorlet{body}{BodyColor}
+\pagecolor{BackgroundColor}
+\NewInfoField{telegram}{\faTelegram}[https://t.me/]
+
+\renewcommand{\namefont}{\Huge\rmfamily\bfseries}
+\renewcommand{\personalinfofont}{\small\bfseries}
+\renewcommand{\cvsectionfont}{\LARGE\rmfamily\bfseries}
+\renewcommand{\cvsubsectionfont}{\large\bfseries}
+
+\renewcommand{\itemmarker}{{\small\textbullet}}
+\renewcommand{\ratingmarker}{\faCircle}
+
+\begin{document}
+    \name{Печенин Дмитрий}
+    \tagline{SENIOR FRONTEND DEVELOPER}
+    \photoL{4cm}{photo}
+
+    \personalinfo{
+        \email{d@pechen.in}\smallskip
+        \phone{+7(965)036-63-41}
+        \location{Санкт-Петербург, Россия}\\
+        \linkedin{dpechenin}
+        \telegram{pechen_in}
+    }
+
+    \makecvheader
+    \columnratio{0.35}
+    \begin{paracol}{2}
+        \cvsection{СПЕЦИАЛИЗАЦИЯ}
+            \begin{quote}
+                Разработка высокопроизводительных  web приложений с повышенными требованиями к надёжности и отзывчивости.
+            \end{quote}
+        \cvsection{НАВЫКИ}
+            \cvtag{Typescript}
+            \cvtag{Javascript}
+            \cvtag{CSS}
+            \cvtag{SCSS}
+            \cvtag{HTML5}
+            \cvtag{Webpack}
+            \cvtag{Vite}
+            \cvtag{Elm}
+            \cvtag{SQL}
+            \cvtag{Docker}
+            \cvtag{Java}
+            \cvtag{microfrontend}
+            \cvtag{Webpack Module Federation}
+            \cvtag{FP}
+
+
+            \medskip
+            \cvtag{ReactJS}
+            \cvtag{React Table}
+            \cvtag{axios}
+            \cvtag{imask}
+            \cvtag{NextJS}
+            \cvtag{Formik}
+            \cvtag{React Router}
+            \cvtag{Redux}
+            \cvtag{Effector}
+            \cvtag{MobX}
+            \cvtag{NestJS}
+            \cvtag{NGINX}
+            \cvtag{REST}
+            \cvtag{GraphQL}
+            \cvtag{SCORM}
+
+
+             \medskip
+             \cvtag{Windows}
+             \cvtag{Linux}
+             \cvtag{bash}
+             \cvtag{cmd}
+             \cvtag{PowerShell}
+             \cvtag{git}
+            \cvtag{websockets}
+
+
+             \medskip
+             \cvtag{Jest}
+             \cvtag{Cypress}
+             \cvtag{Playwright}
+
+
+        \cvsection{Личные качества}
+            \cvtag{целеустремлённость}
+            \cvtag{креативность}
+            \cvtag{ответственность}
+            \cvtag{пунктуальность}
+            \cvtag{аналитическое мышление}
+            \cvtag{гибкость}
+            \cvtag{обучаемость}
+            \cvtag{любознательность}
+            \cvtag{умение работать в команде}
+            \cvtag{терпение}
+            \cvtag{стрессоустойчивость}
+            \newpage
+
+
+        \cvsection{Знание языков}
+            \cvlang{Русския язык}{родной}\\
+            \medskip
+            \cvlang{Английский язык}{B1}
+
+
+        \cvsection{Увлечения}
+            \cvtag{Чтение}
+            \cvtag{Настольные игры}
+            \cvtag{Кино}
+            \cvtag{Путешествия}
+            \cvtag{Функциональные ЯП}
+            \cvtag{Спорт}
+
+        \newpage
+        \switchcolumn
+
+        \cvsection{О себе}
+            \begin{quote}
+                Меня зовут Дмитрий. Я  senior frontend  разработчик из города Санкт-Петербурга.
+                Мне довелось поработать как в стартапах и  web-студиях, так и в крупных компаниях.
+            \end{quote}
+            \begin{quote}
+                Самым интересным и сложным проектом, над котором мне довелось работать, была B2B  платформа для букмекерского бизнеса, т.к. она имела высокие требования к скорости работы.
+                Данный проект был аккредетован Министерством по налогам и сборам РБ.
+            \end{quote}
+            \begin{quote}
+                Также я принимал участие в разработке банковских приложений, edtech  платформы (B2B  и B2C), разработке решения для работы с webpack module federation и ряде других интересных проектов.
+            \end{quote}
+            \begin{quote}
+                Основой успешного проекта считаю общение - общение внутри команды, общение "бизнеса"{ }и  "разработки". Также, не менее важным считаю умение находить компромиссы и оптимальные решения.
+            \end{quote}
+        \cvsection{Опыт работы}
+            \cvevent{Ведущий эксперт по технологиям }{| СберОбразование}{сентябрь 2021 -- по н.в}{СПб,РФ}
+            \textbf{Обязанности}
+            \begin{itemize}
+                \item Разработка нового функционала
+                \item Ведение библиотеки компонентов в Storybook
+                \item Написание тестов (e2e и unit)
+                \item Участие в разработке аналитики для нового функционала
+                \item Написание документации
+                \item Участие в процессе найма и адаптации новых сотрудников
+                \item Участие в релизном процессе
+                \item Разработка внутренних библиотек
+                \item Исследовательская работа
+                \item Участие в глобальных межкомандных процессах
+            \end{itemize}
+            \textbf{Технологический стек}: Typescript, React, GQTY, Effector, Patronum, Webpack module federation,Webpack, TailwindCSS, SCORM, SCSS.
+
+
+            \divider
+            \cvevent{Frontend разработчик }{| АБ Россия }{июнь 2020 -- сентябрь 2021}{СПб, РФ}
+            \textbf{Обязанности}
+            \begin{itemize}
+                \item Разработка нового функционала
+                \item Тестирование (критически важные сценарии)
+                \item Совместная с дизайнерами разработка компонентов ui-kit
+                \item Участие в работе над дизайн системой
+                \item Участие в проектировании API
+            \end{itemize}
+            \textbf{Технологический стек}: Typescript, React, MobX, Webpack, Axios, Styled components, КриптоПРО, РуТокен.
+
+
+            \divider
+            \cvevent{Frontend разработчик }{| Premium Betting Technologies  }{декабрь 2018 -- июнь 2020}{СПб, РФ}
+            \textbf{Обязанности}
+            \begin{itemize}
+                \item Реализация нового функционала
+                \item Рефакторинг и поддержка legacy  на JSP
+                \item Разработка  дополняющих основной продукт решений
+                \item Участие в проектировании API
+                \item Анализ работы приложения
+                \item Оптимизация работы приложения
+                \item Интеграция с платёжными система и сторонними сервисами
+            \end{itemize}
+            \textbf{Технологический стек}: Javascript, React, Redux, Webpack, Axios, Ant Design, StompJS, SockJS.
+
+
+            \divider
+            \cvevent{Frontend разработчик }{| НПК ИнТех  }{июль 2018 -- декабрь 2018}{СПб, РФ}
+            \textbf{Обязанности}
+            \begin{itemize}
+                \item Разработка нового функционала
+                \item Интеграция программного продукта
+            \end{itemize}
+            \textbf{Технологический стек}: Javascript, HighchartsJS, InfluxDB, D3.js, Leaflet.
+
+
+            \divider
+            \cvevent{ Дежурный инженер }{| SpaceWeb  }{июль 2017 -- июль 2018}{СПб, РФ}
+            \textbf{Обязанности}
+            \begin{itemize}
+                \item Доработка web приложений на различных CMS: Wordpress, Joomla, OpenCart, UMI.CMS.
+                \item Анализ работы почтовой системы
+            \end{itemize}
+
+
+            \divider
+            \cvevent{Web разработчик }{| IT Media Group  }{март 2017 -- июль 2018}{СПб, РФ}
+            \textbf{Обязанности}
+            \begin{itemize}
+                 \item Разработка web приложений на различных CMS: Wordpress, Drupal, OpenCart, Joomla.
+                 \item Доработка web-приложений: реализация адаптивности, доработка функционала, разработка новых расширений для  CMS
+            \end{itemize}
+
+        \cvsection{Образование}
+            \cvevent{Магистратура }{| Санкт-Петербургский государственный университет аэрокосмического приборостроения}{сентябрь 2016 -- июнь 2018}{СПб, РФ}
+            \begin{itemize}
+                \item 09.04.01: Информатика и вычислительная техника (математическое моделирование)
+            \end{itemize}
+            \divider
+
+            \cvevent{Бакалавриат }{| Санкт-Петербургский государственный университет аэрокосмического приборостроения}{сентябрь 2012 -- июнь 2016}{СПб, РФ}
+            \begin{itemize}
+                \item 09.03.01: Информатика и вычислительная техника
+            \end{itemize}
+    \end{paracol}
+\end{document}

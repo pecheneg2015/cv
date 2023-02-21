@@ -1,2 +1,7 @@
-# cv
-Software developer resume in Latex
+# CV 
+
+Simple two-column cv. 
+
+### Preview
+
+![Resume Screenshot](/img.png)
